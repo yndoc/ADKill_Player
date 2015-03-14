@@ -1,0 +1,21 @@
+{
+   "background": {
+      "scripts": ["function.js","rulelist.js"]
+   },
+   "description": "Adkill网络视频去广告SWF离线版——支持土豆,优酷,爱奇艺,酷6,乐视,搜狐,哔哩哔哩等——感谢主要脚本提供及完善者15536900&xplsy，SWF文件提供者15536900！yndoc进行打包并提供适当维护！",
+   "homepage_url":"http://bbs.kafan.cn/thread-1514537-1-1.html",
+   "icons": {
+      "128": "icon128.png"
+   },
+   "manifest_version": 2,
+   "minimum_chrome_version": "18.0",
+   "name": "Adkill.Player.Offline",
+   "browser_action": {
+		"default_icon" : "icon64.png",
+		"default_popup" : "popup.html",
+		"default_title" : "Adkill.Player.Offline"
+	},
+   "permissions": [ "proxy", "tabs", "browsingData", "webRequest", "webRequestBlocking","http://*/*", "https://*/*" ],
+   "version": "0.9.1.8",
+   "web_accessible_resources": ["swf/*.swf"]
+}
