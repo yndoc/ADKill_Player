@@ -37,8 +37,8 @@ var pac = {
 //Permission Check + Proxy Control
 function ProxyControl(pram , ip) {
 	if(!compatible) {
-		if(versionPraser() > 39 && versionPraser() < 42 ) {	//用于应对Chrome 40版本中引入的Proxy BUG
-			console.log("Proxy: Chrome > 39");
+		if(versionPraser() == 40 ) {	//用于应对Chrome 40版本中引入的Proxy BUG
+			console.log("Proxy: Chrome = 40");
 			if(pram == "set"){
 				console.log("Setup Proxy");
 				chrome.proxy.settings.set({value: pac, scope: "regular"}, function(details) {});
@@ -559,3 +559,7 @@ for(var i=0;i<cmdlist.length;i++)
 		console.log("Now Extension Has Already Been Set To Proxy Mode!!");
 	}
 };
+
+function versionPraser() {
+	return(parseInt(/\d+/i.exec(/Chrome\/\d+\.\d+\.\d+\.\d+/i.exec(navigator.userAgent))));
+}
